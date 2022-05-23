@@ -2,9 +2,10 @@ site: "saga"
 namespace: gaia
 partition: gaia
 
-spack_root: ""
-conda_base_path: ""
+spack_root: "/nas/gaia/shared/cluster/spack"
+conda_base_path: "/nas/home/napiersk/miniconda3"
 
 spack_packages:
   - cudnn@7.6.5.32-9.0-linux-x64
   - cuda@10.1.243
+  - openjdk@1.8.0_202-b08

@@ -1,6 +1,6 @@
 _includes:
     - "root.params"
-    - "local.params"
+    - "saga.params"
     - "spacy.params"
 
 workflow_directory: "%experiments_root%"
@@ -23,7 +23,7 @@ edl:
 
 amr:
     python_file: "%project_root%/cdse_covid/semantic_extraction/run_amr_parsing.py"
-    model_path: /Users/jcummings/Desktop/projects/GAIA/transition-amr-parser
+    model_path: "%project_root%/../transition-amr-parser"
     max_tokens: 50
     domain: "covid"
     device: cuda
@@ -33,7 +33,7 @@ srl:
 
 wikidata:
     python_file: "%project_root%/cdse_covid/semantic_extraction/run_wikidata_linking.py"
-    model_path: /Users/jcummings/Desktop/projects/GAIA/cdse-covid/wikidata_linker
+    model_path: "%project_root%/wikidata_linker"
 
 unify:
     output: "%experiments_root%/output.json"
@@ -44,7 +44,7 @@ aif:
     aif_output_dir: "%experiments_root%/aif_output"
 
 uiuc_claims:
-    json_file_of_claims: "%project_root%/data/claim_all.json"
+    json_file_of_claims: "%project_root%/dry-run/uiuc/claim_all.json"
     ingester: "%project_root%/cdse_covid/pegasus_pipeline/ingesters/uiuc_claims_ingester.py"
 
 topic_information:

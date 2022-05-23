@@ -1,4 +1,4 @@
-aida-tools @ git+https://github.com/isi-vista/aida-tools.git@130e706ec7b9da5dd47c4c0b683fc477bdeb0f7a#egg=aida_tools
+aida-tools @ git+ssh://git@github.com/isi-vista/aida-tools.git@130e706ec7b9da5dd47c4c0b683fc477bdeb0f7a#egg=aida_tools
 allennlp==2.7.0
 allennlp-models==2.7.0
 amr-utils @ git+https://github.com/elizlee/amr-utils.git@c6af87d4a95cb0b9564f56b5cc00ca8c590522c5#egg=amr_utils

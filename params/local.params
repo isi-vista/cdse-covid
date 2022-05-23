@@ -1,4 +1,4 @@
-conda_base_path: /Users/jcummings/opt/miniconda3
+conda_base_path: /nas/home/napiersk/miniconda3
 conda_environment: covid-claims
 
 site: local

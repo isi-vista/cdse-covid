@@ -3,7 +3,7 @@ _includes:
     - "local.params"
     - "spacy.params"
 
-experiments_root: /Users/jcummings/Desktop/projects/GAIA/merge_feb_16_7
+experiments_root: /nas/home/napiersk/experiments
 workflow_directory: "%experiments_root%"
 experiment_name: merge_aif
 

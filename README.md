@@ -4,10 +4,13 @@
 
 1. Clone repo
 2. Create Python virtual environment
+   - e.g. `conda create -n covid-claims python=3.8`
 3. Make sure that your current Java environment is **Java 8**.
    - If the setup fails at the JAMR step, check that Java 8 is configured
       for the newly downloaded `transition-amr-parser` project.
+   - e.g. `spack load openjdk@1.8.0_202-b08`
 4. Make sure `cuda` is enabled if you are on a machine with a GPU.
+   - e.g. 'spack load cuda@10.0.130; spack load cudnn@7.6.5.32-10.2'
 5. Run `make install [$isi_username]`
    - This assumes that your conda installation is within `~/miniconda3`. If it is not, replace Line 27 of `setup.sh` with: `source ~/PATH_TO_MINICONDA_INSTALL`.
    - If you provide `isi_username`, it will assume that you can access the `minlp-dev-01` server and that you are working from a local system.
@@ -16,6 +19,7 @@
       If not, it will assume that you are working from a `/nas`-mounted server.
 6. You will also need to download and unzip this file into `data/`:
    1. UIUC EDL data (param: `edl.edl_output_dir`): https://drive.google.com/file/d/16ANEPjqy4byNY3B2BmYqsu1ZcBlp9tfR/view?usp=sharing
+   2. Change the edl_output_file edl param. 
 
 ## Docker
 These instructions assume that you are building the image on the SAGA cluster.
@@ -47,7 +51,7 @@ These instructions assume that you are building the image on the SAGA cluster.
 1. Generate workflow
 ```
 conda activate <cdse-covid-env>
-python -m cdse_covid.pegasus_pipeline.claim_pipeline params/claim_detection.params
+python -m cdse_covid.pegasus_pipeline.claim_pipeline params/claims_pipeline.params
 ```
 2. Navigate to experiment dir specified in your params file, execute the workflow, and monitor the progress
 ```
